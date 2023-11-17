@@ -1,12 +1,8 @@
 # Node.js REST API Exercise
 
-Demo project to evaluate Copilot viability
-
 ## Goal
 
-The goal is to create a minimal REST API using node.js and a corresponding Docker image with the help of GitHub Copilot.
-Follow the instructions below and try to use GitHub Copilot as much as possible.
-Try different things and see what GitHub Copilot can do for you, like generating a Dockerfile or a class, add comments, tests, etc.
+The goal of this exercise is to learn how to use GitHub Copilot for building a REST API using Node.js.
 
 ## Instructions
 
@@ -29,8 +25,8 @@ server is listening on port 3000
 
 - In the **nodeserver.js** develop the rest of the methods described in the [Exercise](#exercise) section below
 - In the **test.js** file add methods to test the functionality
-- Run the tests to verify that all is working 
-- Open the **dockerfile**, and fill it based on the comments in order to create a docker container with a node image that can run the web server
+- Run the tests to verify that all works as expected 
+- Open **dockerfile**, and fill it based on the comments in order to create a docker container with a node image that can run the web server
 - Create a command to run docker on port 4000
 - Test that the application is working on port 4000
 - In the **nodeserver.js** file, you can type a new line like `//run a curl command to test the server`
@@ -41,7 +37,7 @@ Also you can be more specific like: `//run a curl command to test the daysBetwee
 
 - The exercise consist of building a web server using Node.js that serves the request of various functionality
 - Make sure that the implemented functionality works as expected by covering it with tests
-- Once the development is completed, build a container using Docker
+- Once the development is completed, build a container using Docker (see the instructions above)
 - You may also want to try documenting and refactorig your code using Copilot.
 
 The requests that the server must handle are the following:
