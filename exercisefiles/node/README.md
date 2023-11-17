@@ -2,7 +2,7 @@
 
 Demo project to evaluate Copilot viability
 
-# Goal
+## Goal
 
 The goal is to create a minimal WebAPI using node.js and a corresponding Docker image with the help of GitHub Copilot.
 Follow the instructions below and try to use GitHub Copilot as much as possible.
