@@ -70,9 +70,13 @@ Create a zip file with the content of a given folder. The path of the folder sho
 
 ### 11. Containerize the application
 
-Use the Dockerfile provided to create a docker image of the application. In this case, the full content is provided, but in order to build, run and test the docker image, you will use Copilot as well to generate the commands. 
+Use the Dockerfile provided to create a docker image of the application. There are some comments in the Dockerfile that will help you to complete the exercise. 
 
-We have created a DOCKER.md file where we will document the steps to build the application (native), build the container image, run the container and test the container.
+In order to build, run and test the docker image, you can use Copilot as well to generate the commands. 
+
+For instance, create a DOCKER.md file where you can store the commands to build, run and test the docker image. You will notice that Copilot will also help you to document your project and commands. 
+
+Examples of steps to document: Build the container image, Run the container, Test the container.
 
 
 
