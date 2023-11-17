@@ -1,7 +1,5 @@
 # GitHub Copilot Hackaton using Nodejs, .NET and Java 
 
-Demo project for running labs to evaluate Copilot viability
-
 - [Goal](#goal)
 - [Pre-requisites](#pre-requisites)
 - [Work with Github Codespaces](#work-with-github-codespaces)
@@ -10,7 +8,7 @@ Demo project for running labs to evaluate Copilot viability
 
 ## Goal
 
-The goal of a GitHub Copilot Hackaton is to learn how to use it, using an exercise that consist of building a web server using Node.js with different functionalities, a .NET Web API or a Java Rest API (either Spring Boot or Quarkus).
+The goal of this exercise is to learn how to use GitHub Copilot for building a .NET Web API or Node.js and Java Rest API (either Spring Boot or Quarkus).
 
 GitHub Copilot is an AI-powered code assistant that helps developers write better code faster. It uses machine learning models trained on billions of lines of code to suggest whole lines or entire functions based on the context of what you’re working on. By using Copilot, you can learn how to write better code and improve your productivity.
 
@@ -19,6 +17,7 @@ Remember:
 - As you type GitHub Copilot will make suggestions, you can accept them by pressing Tab.
 - If nothing shows up after Copilot write some lines , press enter and wait a couple of seconds.
 - On Windows, MacOS or Linux, press Ctrl + Enter, then click Open GitHub Copilot.
+- Alternatively you can use right-click menu to start Copilot inline chat or open a chat window by clicking a chat icon on a left side panel.
 
 ## Pre-requisites
 
