@@ -1,6 +1,6 @@
 # Node.js REST API Exercise
 
-Demo project for running labs to evaluate Copilot viability
+Demo project to evaluate Copilot viability
 
 ## Instructions
 
