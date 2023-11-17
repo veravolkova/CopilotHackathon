@@ -4,10 +4,9 @@ Demo project for running labs to evaluate Copilot viability
 
 ## Instructions
 
-- Download to local the exercisefile folder
-- Open NodeServer.js and begin by writing a Nodejs server, check the first suggestions based on the initial text
-- Open test.js file and analyze the current test
-- Open a command prompt and run the test (mocha test.js)
+- Open **nodeserver.js** and instruct Copilot to create a server and the first "GET" method call based on the ready-made comments
+- Open **test.js** file and analyze the current test
+- Open a command prompt, navigate to **node** folder, and run the test with `mocha test.js` command (you may want to use the --exit flag)
 - See the result, it should display something like:
 
 ``` bash
@@ -22,133 +21,106 @@ server is listening on port 3000
 
 ```
 
-- In the NodeServer.js develop the rest of the methods described in the Exercise described in the section below (do not forget to open color.json file in Visual Studio Code, so CoPilot get all the context to make better recommendations)
-- In the Test.js file add the methods to test the functionality
+- In the **nodeserver.js** develop the rest of the methods described in the [Exercise](#exercise) section below
+- In the **test.js** file add methods to test the functionality
 - Run the tests to verify that all is working 
-- Open the dockerfile file, and fill it, in order to create a docker container with a node image that can run the web server
-- Create command to run docker in port 4000
-- Test that the application is working in port 4000
-- In the **nodeserver.js** file, you can type a new line like //run a curl command to test the server
-
-So we can see how CoPilot based on the current file produces a curl command, to be executed in command line
-- Also you can be more specific like: //run a curl command to test the daysBetweenDates method
-
-So it generates a test for a specific method 
+- Open the **dockerfile**, and fill it based on the comments in order to create a docker container with a node image that can run the web server
+- Create a command to run docker on port 4000
+- Test that the application is working on port 4000
+- In the **nodeserver.js** file, you can type a new line like `//run a curl command to test the server`
+to see how Copilot produces a curl command, based on the current file, to be executed in command line.
+Also you can be more specific like: `//run a curl command to test the daysBetweenDates method` so that it will generate a test for a specific method 
 
 ## Exercise
 
-The exercise consist of building a web server using Nodejs that serves the request of various functionality.
+- The exercise consist of building a web server using Node.js that serves the request of various functionality
+- Make sure that the implemented functionality works as expected by covering it with tests
+- Once the development is completed, build a container using Docker
+- You may also want to try documenting and refactorig your code using Copilot.
 
-The requests that the server must attend are the following:
+The requests that the server must handle are the following:
 
-- **/Get** : 
+- **/get** : 
 
-Return a hello world message
+Return a hello + key (parameter) message<br />
+Please see the comments in **nodeserver.js** file<br />
 
+- **/daysBetweenDates**: 
 
-- **/DaysBetweenDates**: 
+Calculate days between two dates<br />
+Retrieve 2 parameters `date1` and `date 2` from a query string, and calculate the days between those two dates<br />
 
-Calculate days between two dates
+- **/validatephonenumber**: 
 
-receive by query string 2 parameters date1 and date 2, and calculate the days between those two dates.
+Retrieve `phoneNumber` parameter from a query string<br />
+Validate phoneNumber with Spanish format, for example +34666777888<br />
+If phoneNumber is valid return "valid"<br />
+If phoneNumber is not valid return "invalid"<br />
 
-- **/Validatephonenumber**: 
+- **/validateSpanishDNI**:
 
-Receive by querystring a parameter called phoneNumber 
-validate phoneNumber with Spanish format, for example +34666777888
-if phoneNumber is valid return "valid"
-if phoneNumber is not valid return "invalid"
+Retrieve `dni` parameter from a query string<br />
+Validate the format of a spanish DNI (8 digits and 1 letter)<br />
+If dni is valid return "valid"<br />
+If dni is not valid return "invalid"<br />
 
-- **/ValidateSpanishDNI**:
+- **/returnColorCode**:
 
-Receive by querystring a parameter called dni
-calculate DNI letter
-if DNI is valid return "valid"
-if DNI is not valid return "invalid"
+Retrieve `color` parameter from a query string<br />
+Read colors.json file and return the rgba field<br />
+Iterate for each color in colors.json to find the color passed as a parameter<br />
+Return the code.hex field<br />
 
-We will create automated tests to check that the functionality is correctly implemented.
-When the development is completed, we will build a container using Docker
+- **/tellMeAJoke**:
 
-- **/ReturnColorCode**:
-
-Receive by querystring a parameter called color
-
-read colors.json file and return the rgba field
-
-get color var from querystring
-
-iterate for each color in colors.json to find the color
-
-return the code.hex field
-
-- **/TellMeAJoke**:
-
-Make a call to the joke api and return a random joke using axios
+Make a call to the joke api https://api.chucknorris.io/jokes/random<br />
+Return a random joke using axios<br />
         
+- **/moviesByDirector**:
 
-- **/MoviesByDirector**:
+(this will require requesting a FREE API Key here https://www.omdbapi.com/apikey.aspx)<br />
 
-(this will require to browse to https://www.omdbapi.com/apikey.aspx and request a FREE API Key)
+Retrieve `director` parameter from a query string<br />
+Make a call to the movie api  and return a list of movies of that director using axios<br />
+Return the full list of movies<br />
 
-Receive by querystring a parameter called director
+- **/parseUrl**:
 
-Make a call to the movie api  and return a list of movies of that director using axios
+Retrieve `someurl` parameter from a query string<br />
+Parse the url and return the protocol, host, port, path, querystring and hash<br />
 
-Return the full list of movies
+- **/listFiles**:
 
-- **/ParseUrl**:
+Get the current directory<br />
+Get the list of files in the current directory<br />
+Return the list of files<br />
 
-Retrieves a parameter from querystring called someurl
+- **/getLineByLinefromtTextFile**:
 
-Parse the url and return the protocol, host, port, path, querystring and hash
+Create a **sample.txt** file in the root directory and fill it with several lines of text with a couple of them containing a word "Fusce"<br />
+Create a promise to read the file line by line, and return a list of lines that contains "Fusce"<br />
+Return the list of lines<br />
 
-Return the parsed host
-
-- **/ListFiles**:
-
-Get the current directory
-
-Get the list of files in the current directory
-
-Return the list of files
-
-- **/GetFullTextFile**:
-
-Read sample.txt and return lines that contains the word "Fusce"
-
-(becareful with this implementation, since this normally reads the full content of the file before analizing it, so memory usage is high and may fail when files are too big)
-
-- **/GetLineByLinefromtTextFile**:
-
-Read sample.txt line by line
-
-Create a promise to read the file line by line, and return a list of lines that contains the word "Fusce"
-
-Return the list of lines
-
-- **/CalculateMemoryConsumption**:
+- **/calculateMemoryConsumption**:
 
 Return the memory consumption of the process in GB, rounded to 2 decimals
 
-- **/MakeZipFile**:
+- **/makeZipFile**:
 
-Using zlib create a zip file called sample.gz that contains sample.txt
+Using zlib create a zip file called sample.gz that contains **sample.txt**
 
-- **/RandomEuropeanCountry**:
+- **/randomEuropeanCountry**:
 
-Make an array of european countries and its iso codes
+Make an array of European countries and its ISO codes<br />
+Return a random country and its ISO code from the array<br />
 
-Return a random country from the array
+## GitHub Copilot Labs exercises (OUT OF SCOPE)
 
-Return the country and its iso code
+The following tasks can be performed using the Copilot labs add-in, currently PREVIEW functionality, expect some bugs<br />
 
-## GitHub Copilot Labs exercises
+Make sure to install the GitHub Copilot labs extension: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-labs<br />
 
-THe following tasks can be performed using the Copilot labs add-in, currently PREVIEW functionality, expect some bugs.
-
-Make sure to install the GitHub Copilot labs extension: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-labs
-
-Open GitHub Copilot extension to see all the available functionality.
+Open GitHub Copilot extension to see all the available functionality<br />
 
 - **Explain**
 
@@ -167,11 +139,6 @@ In "LANGUAGE TRANSLATION" section select python and click "Ask Copilot" button, 
 Select the content of MakeZipFile
 
 In the BRUSHES section, click in "Readable", see how comments are added and also variables that have short names are renamed to a more understandable name.
-
-
--- **Add Types**
-
-TBD
 
 -- **Fix Bug**
 
@@ -195,16 +162,9 @@ Select some lines of text that contains variables, like:
 
 select the text and in the "BRUSHES" section press the "Debug" button.
 
-
--- **Clean**
-
-TBD
-
-
 -- **List steps**
 
 Select some lines of code that do not have comments and in the  "BRUSHES" section press the "List steps" button.
-
 
 -- **Make robust**
 
@@ -216,10 +176,6 @@ Select some text that comes from input, for example variables that come from que
 
 In the  "BRUSHES" section press the "Make robust" button, you will see that additional validation is added.
 
--- **Chunk**
-
-TBD
-
 -- **Document**
 
 Select some line (e.g. a method or the beggining of the if clause)
@@ -227,8 +183,3 @@ Select some line (e.g. a method or the beggining of the if clause)
     else if (req.url.startsWith('/GetFullTextFile')) 
 
 In the  "BRUSHES" section press the "Document" button, you will see that comments explaining what the code does are added before the line.
-
-
--- **Test Generation**
-
-TBD
