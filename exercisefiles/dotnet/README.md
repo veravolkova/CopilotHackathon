@@ -1,13 +1,8 @@
 # .NET REST API Exercise
 
-Demo project to evaluate Copilot viability
-
 ## Goal
 
-The goal is to create a Minimal WebAPI using .NET 7.0 and a corresponding Docker image with the help of GitHub Copilot.
-Follow the instructions below and try to use GitHub Copilot as much as possible.
-Try different things and see what GitHub Copilot can do for you, like generating a Dockerfile or a class, add comments, etc.
-Check if the new functionality works as expected by covering it with tests.
+The goal of this exercise is to learn how to use GitHub Copilot, using an exercise that consist of building a REST API using .NET.
 
 ## Instructions
 
