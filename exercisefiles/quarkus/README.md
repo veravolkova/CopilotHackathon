@@ -2,7 +2,7 @@
 
 ## Goal
 
-The goal of this exercise is to learn how to use GitHub Copilot, using an exercise that consist of building a REST API using [Quarkus](https://quarkus.io/).
+The goal of this exercise is to learn how to use GitHub Copilot for building a REST API using [Quarkus](https://quarkus.io/).
 
 ## Exercises
 
@@ -32,7 +32,7 @@ Add new operation under /diffdates that calculates the difference between two da
 
 Additionally, create a unit test that validates the operation.
 
-From now on, you will have to create the unit tests for every new operation.
+From now on, you are expected to create unit tests for every new operation.
 
 ### 3. Validate the format of a spanish phone 
 
@@ -74,7 +74,7 @@ Use the Dockerfile provided to create a docker image of the application. There a
 
 In order to build, run and test the docker image, you can use Copilot as well to generate the commands. 
 
-For instance, create a DOCKER.md file where you can store the commands to build, run and test the docker image. You will notice that Copilot will also help you to document your project and commands. 
+For instance, use a DOCKER.md file for storing the commands to build, run and test the docker image. You will notice that Copilot will also help you to document your project and commands. 
 
 Examples of steps to document: Build the container image, Run the container, Test the container.
 
