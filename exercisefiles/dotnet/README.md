@@ -1,8 +1,8 @@
-# .NET REST API Exercise
+# .NET WEB API Exercise
 
 ## Goal
 
-The goal of this exercise is to learn how to use GitHub Copilot for building a REST API using .NET.
+The goal of this exercise is to learn how to use GitHub Copilot for building a WEB API using .NET.
 
 ## Instructions
 
