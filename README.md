@@ -3,8 +3,8 @@
 - [Goal](#goal)
 - [Pre-requisites](#pre-requisites)
 - [Work with Github Codespaces](#work-with-github-codespaces)
-- [Work locally](#work-locally)
-- [Instructions](#instructions)
+- [Hints for Those Working Locally](#hints-for-those-working-locally)
+- [Instructions (Links to Exercises)](#instructions-links-to-exercises)
 
 ## Goal
 
@@ -26,7 +26,7 @@ Remember:
 Make sure your Codespaces monthly usage quota has not been exceeded [Viewing your GitHub Codespaces usage]( https://docs.github.com/en/billing/managing-billing-for-github-codespaces/viewing-your-github-codespaces-usage). 
 
 Once reached the free limit, you can complete the exercises locally in VS Code using Copilot extension [GitHub Copilot in VS Code](https://code.visualstudio.com/docs/editor/github-copilot).
-Please see [Work locally](#work-locally) for further guidance.
+Please see [Hints for Those Working Locally](#hints-for-those-working-locally) for further guidance.
 
 ## Work with GitHub Codespaces
 
@@ -43,7 +43,14 @@ To start programming just start a new codespace and you are ready to go, don't n
 You can choose to click the ellipses (...) at the top of this window and choose `+ New with options...` to create a codespace with more cores to speed up things.
 However, a more powerful codespace will take more usage quota.
 
-### Work locally
+## Instructions (Links to Exercises)
+
+- [Node Server](./exercisefiles/node/README.md)
+- [.NET Web API](./exercisefiles/dotnet/README.md)
+- [Java Spring Boot](./exercisefiles/springboot/README.md)
+- [Java Quarkus](./exercisefiles/quarkus/README.md)
+
+## Hints for Those Working Locally
 
 **VisualStudio Code**
 
@@ -73,11 +80,3 @@ Run:
 
 - [Install Java](https://learn.microsoft.com/en-us/java/openjdk/install)
 - [Install Maven](https://maven.apache.org/install.html)
-
-
-## Instructions
-
-- [Node Server](./exercisefiles/node/README.md)
-- [.NET Web API](./exercisefiles/dotnet/README.md)
-- [Java Spring Boot](./exercisefiles/springboot/README.md)
-- [Java Quarkus](./exercisefiles/quarkus/README.md)
