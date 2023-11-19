@@ -41,6 +41,8 @@ Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration:
 
 ### Exercise 2
 
+From now on, you are expected to create unit tests for every new operation.
+
 - Inside `MinimalAPI\Program.cs` add the following endpoints:
 
 - **/daysBetweenDates**: 
