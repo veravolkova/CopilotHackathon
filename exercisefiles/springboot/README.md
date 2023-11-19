@@ -60,7 +60,7 @@ List files and folders under a given path. The path should be a query parameter.
 
 ### 9. Word counting
 
-Given the path of a file (**sample.txt** in the root directory) count the number of occurrence of a provided word. The path and the word should be query parameters. The response should be in Json format.
+Given the path of a file (**sample.txt** in the root directory) count the number of occurrence of a word "Copilot." The path and the word should be query parameters. The response should be in Json format.
 
 ### 10. Zipping
 
