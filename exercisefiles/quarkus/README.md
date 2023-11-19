@@ -8,8 +8,6 @@ The goal of this exercise is to learn how to use GitHub Copilot for building a R
 
 We have created a Quarkus project with some files already created, you can find the project in the folder **exercisefiles/quarkus**. 
 
-Let's start copiloting!!!
-
 ### 1. Create the code to handle a simple GET request
 
 Move to the **DemoResource.java** file and start writing the code to handle a simple GET request. In this first exercise, we have provided a comment that describes the code you need to generate. Just press enter and wait a couple of seconds, Copilot will generate the code for you. If you are not happy with the code generated, you can press enter again and Copilot will generate a new code. In case of issues, you can use the right-click menu to start Copilot inline chat. 
