@@ -91,8 +91,7 @@ Return the list of files<br />
 
 - **/getLineByLinefromtTextFile**:
 
-Create a **sample.txt** file in the root directory and fill it with several lines of text with a couple of them containing a word "Fusce"<br />
-Create a promise to read the file line by line, and return a list of lines that contains "Fusce"<br />
+Create a promise to read **sample.txt** file in the root directory line by line, and return a list of lines that contains "Fusce"<br />
 Return the list of lines<br />
 
 - **/calculateMemoryConsumption**:
