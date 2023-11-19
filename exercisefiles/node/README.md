@@ -78,14 +78,6 @@ Return the code.hex field<br />
 Make a call to the joke api https://api.chucknorris.io/jokes/random<br />
 Return a random joke using axios<br />
         
-- **/moviesByDirector**:
-
-(this will require requesting a FREE API Key here https://www.omdbapi.com/apikey.aspx)<br />
-
-Retrieve `director` parameter from a query string<br />
-Make a call to the movie api  and return a list of movies of that director using axios<br />
-Return the full list of movies<br />
-
 - **/parseUrl**:
 
 Retrieve `someurl` parameter from a query string<br />
