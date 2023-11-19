@@ -91,7 +91,7 @@ Return the list of files<br />
 
 - **/getLineByLinefromtTextFile**:
 
-Create a promise to read **sample.txt** file in the root directory line by line, and return a list of lines that contains "Fusce"<br />
+Create a promise to read **sample.txt** file in the root directory line by line, and return a list of lines that contains "Copilot"<br />
 Return the list of lines<br />
 
 - **/calculateMemoryConsumption**:
